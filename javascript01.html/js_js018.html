@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Javascript - array data control</title>
+    <script type="text/javascript">
+      // students information
+      var students = [];
+      students.push({name: 'Lilian', eng: 87, math: 60, kor:99, sci: 92});
+      students.push({name: 'Jeremy', eng: 40, math: 20, kor:50, sci: 70});
+      students.push({name: 'Jimwel', eng: 86, math: 65, kor:38, sci: 80});
+      students.push({name: 'John', eng: 78, math: 85, kor:50, sci: 89});
+      students.push({name: 'Kim', eng: 67, math: 89, kor:50, sci: 92});
+      students.push({name: 'King', eng: 87, math: 80, kor:60, sci: 82});
+      students.push({name: 'Park', eng: 67, math: 90, kor:79, sci: 52});
+      students.push({name: 'Jay', eng: 87, math: 70, kor:89, sci: 72});
+      students.push({name: 'Edson', eng: 87, math: 60, kor:79, sci: 72});
+      students.push({name: 'Redford', eng: 67, math: 70, kor:65, sci: 72});
+
+
+      for (var i in students){
+        // get total sum
+        students[i].getSum = function () {
+          return this.eng + this.math + this.kor + this.sci;
+        };
+        students[i].getAverage = function (){
+          return this.getSum() / 4;
+        };
+      }
+
+     var output = 'NAME TOTAL AVERAGE\n';
+     for(var key in students){
+       with(students[key]){
+         output += name + '  ' + getSum() + '  ' + getAverage() + '\n';
+       }
+     }
+     alert(output);
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

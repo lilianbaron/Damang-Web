@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Javascript - in, with</title>
+    <script type="text/javascript">
+    /*
+    var product = {
+      name: 'Microsoft Office 2016',
+      price: '10,000 peso',
+      language: 'English',
+      supportOS: 'Win 32/64',
+      subscription: true
+    }
+    var output = '';
+    for (var key in product){
+      output += '*' + key + ': ' +product[key] + '\n';
+    }
+    alert(output);
+
+    // in
+    var student = {
+      name: 'Lilian',
+      eng: '85%',
+      math: '90%',
+      kor: '75%',
+      sci: '89%',
+    };
+
+    // alert('name' in student);
+    var output = '';
+    output += "'name' in student: " + ('name' in student) + '\n';
+    output += "'addr' in student: " + ('addr' in student);
+
+    alert(output);
+    */
+
+    // with
+    var student = {
+      name: 'Lilian',
+      eng: 85, math: 90,
+      kor: 75,  sci: 89,
+      output: 'Good'
+    };
+    var output = '';
+    /*
+      output += 'Name: ' + student.name + '\n';
+      output += 'Eng: ' + student.eng + '\n';
+      output += 'Math: ' + student.math + '\n';
+      output += 'Kor: ' + student.kor + '\n';
+      output += 'Sci: ' + student.sci + '\n';
+      output += 'Total: ' + (student.eng + student.math + student.kor + student.sci) + '\n';
+      output += 'Average: ' +  (student.eng + student.math + student.kor + student.sci)/4;
+      */
+      with(student){
+        window.output += 'Name: ' + name + '\n';
+        window.output += 'Name: ' + eng + '\n' ;
+        window.output += 'Name: ' + math + '\n';
+        window.output += 'Name: ' + kor + '\n';
+        window.output += 'Name: ' + sci + '\n';
+        window.output += 'Total: ' + (eng + math + kor + sci) + '\n';
+        window.output += 'Average: ' + (eng + math + kor + sci)/4;
+      }
+      alert(output);
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

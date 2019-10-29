@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Javascript - callback function</title>
+    <script type="text/javascript">
+    /*
+    function callTenTimes() {
+      for(var i = 0; i<10; i++){
+        callback();
+      }
+    }
+    var callback = function(){
+      alert('FUNCTION CALL');
+    };
+    callTenTimes(callback);
+    */
+      function callTenTimes() {
+        for(var i = 0; i<10; i++){
+          callback();
+        };
+      };
+      callTenTimes(function(){
+        alert('FUNCTION CALL');
+      });
+    
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

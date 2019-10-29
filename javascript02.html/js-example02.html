@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>javascript - Naming convention (rule)</title>
+  </head>
+  <body>
+    <h1>Naming Convention (rule)</h1>
+
+    <script>
+      "use script"
+      var $test, _test, test, $1234, t123;
+      // var 123(X), 1test(x)
+
+      //1.
+      // ! : not (T -> F, F -> T)
+      // && : and (T && T -> T, F && T -> F, F && F -> F)
+      // || : or (T || F -> T, F || T, F || F -> F)
+
+      var v1 = true;
+      var v2 = !v1;
+      console.log(v2); //=> F
+
+      console.log("=====and(&&)=====");
+      console.log("and: true && true = ", true && true);
+      console.log("and: true && false = ", true && false);
+      console.log("and: false && true = ", false &&  true);
+      console.log("and: false && false = ", false && false);
+
+      console.log("=====or(||)=====");
+      console.log("or: true || true = ", true || true);
+      console.log("or: true || false = ", true || false);
+      console.log("or: false || true = ", false || true);
+      console.log("or: false || false = ", false || false);
+
+      var age = 24;
+      if(age >= 19) console.log('adult');
+      if(age >= 1 && age <= 18) console.log('child');
+
+      var a = 10;
+      var b = 20;
+      a += b;
+      // a = a + b ;
+      console.log(a);
+
+      var x = 20;
+      var y = 30;
+      console.log(x = y);
+      console.log( x==y);
+      console.log(20 == "20");
+      console.log(20 === "20"); // type check
+
+      console.log("=====typeof====="); // string
+      console.log(typeof '10'); //string
+      console.log(typeof 10); // number
+      console.log(typeof 3.14); //number
+      console.log(typeof true); //boolean
+      console.log(typeof false); //boolean
+      console.log(typeof [90, 80, 70]); // object
+      console.log(typeof {name: 'Lilian', age: 24}); //object
+      console.log(typeof function(){}); //function // object
+
+      var ok;
+      console.log(ok);
+
+    </script>
+  </body>
+</html>

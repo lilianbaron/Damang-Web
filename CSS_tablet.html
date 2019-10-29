@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS3 - Tablet Layout</title>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <style media="screen">
+      /* Default Setting */
+      * { margin: 0; padding: 0;}
+      body {
+        font-family: 'Helvetica', sans-serif;
+        min-width: 760px;
+
+      }
+      li { list-style: none; }
+      a { text-decoration: none; }
+      /* Header */
+      #main_header{
+        height: 60px;
+        line-height: 60px;
+        padding-left: 10px;
+        border-bottom: 1px solid black;
+        background-color: #3232F0;
+        color: white;
+        font-family: 'Dancing Script', cursive;
+      }
+      /* Top Navigation */
+      #main_gnb{ overflow: hidden;
+        background-color: lightblue;
+        border-bottom: 1px solid #7979EF;
+        background-image: url('images/darknightsky.jpg');
+      }
+
+      #main_gnb > ul.left{
+        float: left;
+        overflow: hidden;
+      }
+      #main_gnb > ul.right{
+        float: right;
+        overflow: hidden;
+      }
+      #main_gnb > ul.left > li{ float: left; }
+      #main_gnb > ul.right > li{ float: left; }
+      #main_gnb a {
+        display: block;
+        padding: 10px 20px;
+        border-left: 1px solid pink;
+        border-right: 1px solid hotpink;
+        color: white;
+        font-weight: bold;
+        border-radius: 10px 10px 10px 10px;
+        font-family: 'Lobster', cursive;
+      }
+      #main_gnb > ul > li> a:hover{
+        background-color: pink;
+      }
+
+      /* Main Contents */
+      #wrap{
+        overflow: hidden;
+      }
+      #wrap > #main_lnb{
+        float: left;
+        width: 200px;
+      }
+      #wrap > #content_wrap{
+        float: left;
+        width: 100%;
+        margin-right: -200px;
+      }
+      #wrap > #content_wrap > #content { padding-right: 200px;}
+      /* Left List Menu */
+      #wrap { background-color: #7979EF; }
+      #main_lnb > ul > li > a {
+        display: block;
+        height: 59px; line-height: 50px;
+        padding-left: 15px;
+        border-bottom: 1px solid lightblue;
+        border-radius: 10px 10px 10px 10px;
+        color: white;
+        font-weight: bold;
+        font-family: 'Dancing Script', cursive;
+        background-image: url('images/abstractbluebackground.jpg');
+      }
+      #content{
+        background-image: url('images/sky.jpg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        border-left: 1px solid black;
+        font-family: 'Dancing Script', cursive;
+        color: white;
+      }
+      #content h1 { color: #A10000};
+      #article{ padding: 10px; }
+      /* Footer */
+      #main_footer{
+        padding: 10px;
+        border-top: 1px solid #7979EF;
+        text-align: center;
+        background-image: url('images/darknightsky.jpg');
+        font-family: 'Dancing Script', cursive;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+
+    <header id="main_header">
+        <h1>Lilian Tablet</h1>
+    </header>
+      <nav id="main_gnb">
+        <ul class="left">
+          <li><a href="#">Button1</a></li>
+          <li><a href="#">Button2</a></li>
+          <li><a href="#">Button3</a></li>
+          <li><a href="#">Button4</a></li>
+          <li><a href="#">Button5</a></li>
+          <li><a href="#">Button6</a></li>
+        </ul>
+        <ul class="right">
+          <li><a href="#">Button7</a></li>
+          <li><a href="#">Button8</a></li>
+        </ul>
+      </nav>
+      <div id="wrap">
+        <nav id="main_lnb">
+          <ul>
+            <li><a href="#">LeftBtn1</a></li>
+            <li><a href="#">LeftBtn2</a></li>
+            <li><a href="#">LeftBtn3</a></li>
+            <li><a href="#">LeftBtn4</a></li>
+            <li><a href="#">LeftBtn5</a></li>
+          </ul>
+        </nav>
+        <div id="content_wrap">
+          <div id="content">
+            <article>
+              <h1>Text Content 01</h1>
+              <p>Hello Good Morning!!! Hello Good Morning!!! Hello Good Morning!!!</p>
+              <p>Hello Good Morning!!! Hello Good Morning!!! Hello Good Morning!!!</p>
+            </article>
+            <article>
+              <h1>Text Content 02</h1>
+              <p>Hello Good Morning!!! Hello Good Morning!!! Hello Good Morning!!!</p>
+              <p>Hello Good Morning!!! Hello Good Morning!!! Hello Good Morning!!!</p>
+              <p>Hello Good Morning!!! Hello Good Morning!!! Hello Good Morning!!!</p>
+              <p>Hello Good Morning!!! Hello Good Morning!!! Hello Good Morning!!!</p>
+              <p>Hello Good Morning!!! Hello Good Morning!!! Hello Good Morning!!!</p>
+              <p>Hello Good Morning!!! Hello Good Morning!!! Hello Good Morning!!!</p>
+              <p>Hello Good Morning!!! Hello Good Morning!!! Hello Good Morning!!!</p>
+            </article>
+            <article>
+              <h1>Text Content 03</h1>
+              <p>Hello Good Morning!!! Hello Good Morning!!! Hello Good Morning!!!</p>
+              <p>Hello Good Morning!!! Hello Good Morning!!! Hello Good Morning!!!</p>
+            </article>
+          </div>
+
+        </div>
+      </div>
+      <footer id="main_footer">
+        <h3>Lilian Tablet Footer</h3>
+        <address>Cainta, Rizal, Philippines</address>
+      </footer>
+
+  </body>
+</html>

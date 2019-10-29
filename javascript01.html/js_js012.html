@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Javascript - inner Function</title>
+    <script type="text/javascript">
+    /*
+    timer
+    milisecond 1000 == 1s
+     1. setTimeout(function, millisecond)
+    => after 3s ~ run
+    setTimeout(function(){
+      alert('Hello~');
+    },5000);
+
+    2. setInterval(function, milisecond)
+    var intervalID = setInterval(function () {
+      alert(new Date());
+    },1000);
+
+    setTimeout(function () {
+      clearInterval(intervalID);
+    },10000);
+    */
+
+    alert('A');
+    setTimeout(function () {
+      alert('B');
+    },0);
+    alert('C');
+    </script>
+
+  </head>
+  <body>
+
+  </body>
+</html>

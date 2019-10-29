@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>js DATA type</title>
+    <script type="text/javascript">
+        var primitiveNumber = 273;
+        var objectNumber = new Number(123);
+        var stringNumber = '123';
+
+        // primitiveNumber.method = function () {
+        // return 'primitive Method';
+        // };
+        // var output = '';
+        // output += primitiveNumber.method() + '\n';
+        // alert(output);
+
+        Number.prototype.method = function () {
+          return  'Method on Prototype';
+        }
+        var output = '';
+          output += primitiveNumber.method() + '\n';
+          output += objectNumber.method();
+
+          alert(output);
+          
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

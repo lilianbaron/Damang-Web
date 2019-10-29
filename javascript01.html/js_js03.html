@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Javascript - if</title>
+    <script type="text/javascript">
+      /*
+      Date()
+      => constructor, getDate, getDay, getFullYear, getHours, getMilliseconds, getMinutes, getMonth, getSeconds
+      */
+      var date = new Date();
+      var hour = date.getHours();
+      //var hour = 12;
+
+
+      alert(hour);
+
+      if (hour < 12) {
+        alert ('Good Morning!')
+      } else  if (hour == 12) {
+         alert ('lunch time!')
+       } else {
+         alert('Good Afternoon!')
+       }
+     
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

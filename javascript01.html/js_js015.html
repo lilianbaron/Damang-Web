@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>javascript - Object</title>
+    <script type="text/javascript">
+
+    //  var array = ['apple', 'banana', 'mango', 'strawberry'];
+    /*
+    var student = {
+       name:'Lilian',
+       age: 24,
+        addr:'Cainta Rizal',
+        birthday: 'January 20'
+      };
+
+      alert(student['age']);
+      alert(student.addr);
+
+      var student = {
+         name:'Lilian',
+         age: 24,
+          addr:'Cainta Rizal',
+          birthday: 'January 20'
+        };
+
+      var object = {
+      number: 135;
+      string: 'Philippines',
+      boolean : true,
+      array: [23, 11, 43, 56],
+      method: function(){ }
+    };
+    object.method();
+    */
+
+    var person = {
+      name: 'Lilian',
+      eat: function (food) {
+        alert( this.name + ' ate '+ food + '..!' );
+      }
+    };
+    person.eat('rice');
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

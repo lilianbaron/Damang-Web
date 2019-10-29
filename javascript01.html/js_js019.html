@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Javascript - constructor</title>
+    <script type="text/javascript">
+      function Student(name,korean,math,english,science) {
+        //property
+      this.username = name;
+      this.userkor = korean;
+      this.usermat = math;
+      this.usereng = english;
+      this.usersci = science;
+    /*
+      this.getSum = function () {
+        return this.userkor + this.usermat + this.usereng + this.usersci;
+      };
+
+      // method
+      this.getAverage = function () {
+        return this.getSum() / 4;
+      };
+      this.toString = function () {
+      return  this.username + '\t' + this.getSum() + '\t' + this.getAverage();
+      };
+      */
+    };
+    // method
+    //prototype
+    Student.prototype.getSum = function () {
+      return this.userkor + this.usermat + this.usereng + this.usersci;
+    };
+
+    Student.prototype.getAverage = function () {
+      return this.getSum() / 4;
+    };
+    Student.prototype.toString = function () {
+    return  this.username + '\t' + this.getSum() + '\t' + this.getAverage();
+   };
+
+    //  var student = new Student('Lilian',85,90,80,85);
+    // student information - array
+
+    var students = [];
+    students.push(new Student('Lilian',65,90,70,75));
+    students.push(new Student('John',65,80,60,75));
+    students.push(new Student('Jeremy',85,80,60,70));
+    students.push(new Student('Jimwel',65,80,75,65));
+    students.push(new Student('Kyle',75,85,80,72));
+    students.push(new Student('Jay',65,80,65,75));
+
+    //output
+    var output = 'Name \t Total \t Avg \n';
+    for (var i in students){
+      output += students[i].toString() + '\n';
+    }
+
+    alert(output);
+  </script>
+  </head>
+  <body>
+
+  </body>
+</html>

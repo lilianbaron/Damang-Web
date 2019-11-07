@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Condition Statement</title>
+  </head>
+  <body>
+    <h1>Condition (if)</h1>
+    <script type="text/javascript">
+      "use strict"
+
+      console.log("==== 1. if(condition) command; ====");
+
+      var age = 19;
+      if(age >= 19){
+        console.log("adult");
+      }
+
+      console.log("==== 2. if(condition) {command;...} ====");
+      var age = 19;
+      if(age >= 19){
+        console.log("adult");
+        console.log("get a job");
+      }
+
+      console.log("==== 3. if (condition){..}else{..}");
+      var input = prompt("your age??");
+      var  age = Number(input);
+      if (age >= 19){
+        console.log("adult");
+      }else{
+        console.log("not an adult");
+      }
+
+    console.log("==== 4. if(condition){..}else if{..}else{..}====");
+    var input = prompt("age??");
+    var age = Number(input);
+    if(age < 0){
+      console.log("error");
+    }else if(age <= 7){
+      console.log("baby");
+    }else if(age <= 13){
+      console.log("child");
+    }else if(age <= 19){
+      console.log("teenage");
+    }else{
+      console.log("adult");
+    }
+
+    /*
+    switch(value){
+    case value1:
+        command;
+        break;
+    case value2:
+       command;
+       break;
+    case value3:
+      command;
+      break;
+    default:
+      command;
+  }
+    */
+
+    console.log("==== switch {}====");
+    var month = Number(prompt("insert month 1 ~ 12"));
+
+    switch(month){
+      case 1:
+      console.log("January");
+      break;
+      case 2:
+      console.log("February");
+      break;
+      case 3:
+      console.log("March");
+      break;
+      case 4:
+      console.log("April");
+      break;
+      case 5:
+      console.log("May");
+       break;
+       case 6:
+       console.log("June");
+       break;
+       case 7:
+       console.log("July");
+       break;
+       case 8:
+       console.log("August");
+       break;
+       case 9:
+       console.log("September");
+       break;
+       case 10:
+       console.log("October");
+       break;
+       case 11:
+       console.log("November");
+       break;
+       case 12:
+       console.log("December");
+       break;
+       default:
+       console.log("Invalid Month");
+    }
+
+    // window : Global variable
+    // you can skip window.
+    var age2 = 50;
+    console.log(age2);
+    console.log(window.age2); //window : skip
+
+    var age3 = 40;
+    console.log(window.age3);
+
+    window.alert("This is alert box!!");
+
+    </script>
+  </body>
+</html>

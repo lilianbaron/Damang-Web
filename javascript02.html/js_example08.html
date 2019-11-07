@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Function & Command(try, catch)</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      "use strict"
+
+      try {
+          console.log(age);
+      } catch (err) {
+        console.log(err.message);
+      }
+
+      console.log("name = ", name);
+      var name = "Lilian";
+      console.log("name = ", name);
+
+      console.log(plus(10,20));
+
+      try {
+        console.log(plus2(10,20));
+      } catch (err) {
+        console.log(err.message);
+      }
+
+      function plus(a,b) {
+        return a + b;
+      }
+
+      var plus3 = plus;
+
+      var plus2 = function(a,b) {
+        return a + b;
+      }
+
+      console.log(plus(20,30));
+      console.log(plus2(30,40));
+      console.log(plus3(40,50));
+
+
+
+    </script>
+  </body>
+</html>

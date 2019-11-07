@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Js - Data type change</title>
+  </head>
+  <body>
+    <h1>Data type</h1>
+
+    <script>
+      "use strict";
+      //1) explicit
+      //2) implicit
+
+      //1) explicit
+      // Number(value), String(value), Boolean(value), Object(value)
+      // Number(value) => window.Number(value)
+      console.log("Hello World");
+      window.console.log("Hello world");
+
+      //change Number type
+      console.log("====changing number type====");
+      console.log(Number(null)); //0
+      console.log(Number(true)); //1
+      console.log(Number(false)); //0
+      console.log(Number(undefined)); //NaN
+      console.log(Number("")); //0
+      console.log(Number("2019")); //2019
+      console.log(Number("ok")); //NaN
+      console.log(Number(10)); //10
+      console.log(Number(NaN)); //NaN
+      console.log(Number({name: 'Lilian', age:10})); //NaN
+
+      //Changing String typeof
+      //Q 2)
+      console.log("====Changing String Type====");
+      console.log(window.String(undefined)); //"undefined"
+      console.log(String(null)); //"null"
+      console.log(String(true)); //"true"
+      console.log(String(false)); //"false"
+      console.log(String("")); //
+      console.log(String("3.14")); //"3.14"
+      console.log(String("ok")); //"ok"
+      console.log(String(2019)); //"2019"
+      console.log(String(NaN)); //NaN
+      console.log(String({name: 'Lilian', age: 20})); // [object object]
+
+      // Q 3) changing Boolean type (true/false)
+      console.log("=====changing Boolean type====");
+      console.log(window.Boolean(undefined)); //false
+      console.log(Boolean(null)); //false
+      console.log(Boolean(true)); //true
+      console.log(Boolean(false)); //false
+      console.log(Boolean("")); //false
+      console.log(Boolean("3.14")); //true
+      console.log(Boolean("Hello")); //true
+      console.log(Boolean(10)); //true
+      console.log(Boolean(NaN)); //false
+      console.log(Boolean({name: 'Lilian', age: 20})); //true
+
+
+    //Q 4) changing object type {}
+    console.log("====changing Object type====");
+    console.log(window.Object(undefined)); //{}
+    console.log(Object(null)); // {}
+    console.log(Object(true)); //Boolean
+    console.log(Object(false)); //Boolean
+    console.log(Object("")); // String
+    console.log(Object("2019")); //string{0:"2", 1:"0", 2:"1", 3:"9", length: 4}
+    console.log(Object("3.14")); //strng{0:"3", 1:".", 2:"1", 3:"4", length: 4}
+    console.log(Object(10)); //Number {}
+    console.log(Object(NaN)); // Number {}
+    console.log(Object({name: 'Lilian', age:20})); // Object {name: 'Lilian', age:20}
+
+    //2) implicit
+    console.log("20" - "30");
+    console.log(true << 2);
+
+
+    </script>
+  </body>
+</html>

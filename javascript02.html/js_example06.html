@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Function</title>
+  </head>
+  <body>
+    <h1>Function</h1>
+       <script type="text/javascript">
+         "use strict"
+
+         // function name(parameter, parameter,...) {command ...}
+         function test(){
+           console.log("Hello World!!");
+
+           var input = prompt('name');
+           console.log(input);
+         }
+
+        // test();
+
+        // Q: 1~ X : total sum => ?
+        //local
+        function f(x){
+            var sum = 0;
+          for( var l=1;  l<=x; l++){
+            sum += l;
+          }
+          return  sum;
+        }
+        //  console.log("1 ~ 10 total sum => ", f(10));
+        //console.log(sum);
+
+        //global
+          var sum = 0;
+        function f(x){
+          for( var l=1;  l<=x; l++){
+            sum += l;
+          }
+          return  sum;
+        }
+        //  console.log("1 ~ 10 total sum => ", f(10));
+        //console.log(sum);
+
+        // arguments
+        function accum(p1, p2, ){
+          var sum = 0;
+          console.log("====()====");
+
+          console.log(p1, p2);
+          console.log(arguments[0],arguments[1]);
+
+          for(var i=0; i < arguments.length; i++){
+            sum = sum + arguments[i];
+          }
+          return sum;
+        }
+
+      //  console.log(accum(10, 20));
+      //  console.log(accum(10, 20, 30));
+      //  console.log(accum(10, 20, 30, 40));
+
+
+      function my(){
+        var str = ' ';
+
+        for(var i in arguments){
+          str += ' ' + arguments[i];
+
+          }
+          console.log(str);
+      }
+
+      my("aaa","bbb","ccc","ddd");
+
+
+       </script>
+  </body>
+</html>

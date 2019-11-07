@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Array , Loop</title>
+  </head>
+  <body>
+    <h1>Array and Loop</h1>
+
+    <script>
+      "use script"
+
+      // Array
+      // [value, value, value]
+      // new Array(value, value, value)
+
+      var scores = [100, 90, 98, 70, 88];
+      console.log(scores); // [100,90,98,70,88]
+      console.log(scores[0],scores[3]); // 100, 70
+      console.log(scores[6]); // undefined
+      console.log(scores.length); //5
+
+      //prototype
+      // Array.prototype.pop()
+      // pop() - take the last value and remove
+      console.log("==== pop()====");
+      console.log(scores.pop()); //88
+      console.log(scores); // [100,90,98,70]
+      console.log(scores.pop()); //70
+      console.log(scores); // [100,90,98]
+      console.log(scores.pop()); //98
+      console.log(scores); // [100,90]
+
+      // push() add value
+      console.log("====push()====");
+      scores.push(50);
+      console.log(scores); // [100,90,50]
+      scores.push(77);
+      console.log(scores); // [100,90,50,77]
+      scores.push(100,200);
+      console.log(scores); // [100,90,50,77,100,200]
+
+      var scores2 = [100,90];
+      console.log(scores2.length); // 2
+      scores2[1] = 100;
+      console.log(scores2); // [100,100]
+      scores2[0] = 90;
+      console.log(scores2); // [90,100]
+      scores2[10] = 50;
+      console.log(scores2); // [90,100,,,,,,,50]
+      console.log(scores2.length); //11
+
+      var scores3 = ["Lilian", 100, '100', true,{name:'john',age:20},2019];
+      console.log(scores3);
+
+      // Loop
+      console.log("==== Loop====");
+
+      console.log("==== for 1 ====");
+      for(var i=0; i < scores3.length; i++){
+        console.log(scores3[i]);
+      }
+
+      console.log("==== for 2 ====");
+      var i = 0;
+      for( ; i < scores3.length; i++){
+        console.log(scores3[i]);
+      }
+
+      console.log("==== for 3 ====");
+      var i = 0;
+      for( ; i < scores3.length; ){
+        console.log(scores3[i]);
+        i += 1; // i = i + 1
+      }
+
+      console.log("==== while 1 ====");
+      // var scores3 = ["Lilian", 100, '100', true,{name:'john',age:20},2019];
+      var i = 0;
+      while (i < scores3.length){
+        console.log(scores3[i]);
+        i += 1;
+      }
+
+      console.log("==== while 2 ====");
+      var i = 0;
+      while (true){
+        if(i >= scores3.length){
+          break;
+        }
+        console.log(scores3[i]);
+        i += 1;
+      }
+
+      console.log("==== Question ====");
+      // print to number value only (while, if, typeof)
+
+    var i = 0;
+    while(i < scores3.length){
+      // console.log(typeof scores3[i]);
+      if (typeof scores3[i] == 'number'){
+        console.log(scores3[i]);
+      }
+      i++;
+    }
+
+    var i = 0;
+    while(i < scores3.length){
+      if(typeof scores3[i] == 'string'){
+        console.log(scores3[i]);
+      }
+      i++;
+    }
+
+    console.log("==== for, in ====");
+   // var scores3 = ["Lilian", 100, '100', true,{name:'john',age:20},2019];
+   for ( var i in scores3){
+     console.log(scores3[i]);
+   }
+
+   console.log("==== do ... while ====");
+   var i = 0;
+   do{
+     console.log(scores3[i]);
+     i++;
+   } while(i < scores3.length)
+
+
+
+    </script>
+  </body>
+</html>

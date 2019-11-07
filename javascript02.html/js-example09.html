@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Inner Function</title>
+  </head>
+  <body>
+    <h1>Inner Function</h1>
+    <script type="text/javascript">
+      "use strict"
+/*
+      function plus(a,b) {
+        return a + b;
+      }
+*/
+
+    function calc(a, b, op){
+      switch (op) {
+        case '+':
+         return plus (a, b);
+        case '-':
+         return minus(a, b);
+        case '*':
+         return multi (a, b);
+        case '/':
+         return divide (a, b);
+        default:
+         throw 'wrong data~!!!';
+      }
+      function plus(a,b) {
+        return a + b;
+      }
+      function minus(a,b) {
+        return a - b;
+      }
+      function multi(a,b) {
+        return a * b;
+      }
+      function divide(a,b){
+        return a / b;
+      }
+    }
+     console.log(calc(10,20,'/')); // +,-,/,*
+    //  console.log(plus(10,20)); // error
+
+
+        // inner function - Factory Method : Pattern
+            console.log("==== Factory Method : Pattern ====");
+
+            function runFactory(level) {
+              switch (level) {
+                case 2 : return run2();
+                case 3 : return run3();
+                default: return run1();
+              }
+              function run1(){
+                 console.log("Run speed 1");
+                }
+              function run2(){
+                  console.log("Run speed 2");
+               }
+               function run3(){
+                  console.log("Run speed 3");
+            }
+          }
+          // var level = prompt("Run Level?" ,1);
+          //  var run = runFactory(Number(level));
+
+
+
+          // Throw the Function to Parameter
+            function plus2(a,b){
+              return a + b;
+            }
+            function minus2(a,b){
+              return a - b;
+            }
+
+            function calc2(f,a,b){
+              console.log(f(a,b));
+            }
+            calc2(plus2,10,20);
+            calc2(minus2,20,10);
+
+
+
+
+
+    </script>
+  </body>
+</html>

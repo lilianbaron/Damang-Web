@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Function - Declaration, Expression</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      "use strict"
+        //1. Declaration
+        function plus(a,b){
+          return a + b;
+        }
+        console.log("a + b =", plus(10,20));
+
+        //2. Expression
+        var plus2 = function(a,b){
+          return a + b;
+        }
+        console.log(plus2(10,20));
+    </script>
+  </body>
+</html>

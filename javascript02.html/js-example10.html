@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>javascript - Closure</title>
+  </head>
+  <body>
+    <h1>Closure</h1>
+    <script type="text/javascript">
+      console.log("==== example 01 ====");
+
+      function addTo(num) {
+        return add;
+
+        function add(inner) {
+          return num + inner;
+        }
+      }
+
+    var addThree = addTo(3);
+    var addFour = addTo(4)
+    // console.dir(addThree);
+
+    console.log(addThree(1));
+    console.log(addFour(1));
+
+    console.log("==== example 02 ====");
+    // BDO Bank : Deposit 0.015, Installment saving 0.034, Fund 0.08 etc 0.008
+
+        function makeInterest(type) {
+          var interRate = 0;
+          if(type == 'Deposit') {
+            interRate = 0.015;
+          }else if(type == 'Installment saving') {
+            interRate = 0.034;
+          }else if(type == 'Fund') {
+            interRate = 0.08;
+          }else {
+            interRate = 0.008;
+          }
+
+          return  interest;
+
+          function interest(money) {
+            return money + (money * interRate);
+          }
+        }
+
+        var interest1 = makeInterest('Deposit');
+        var interest2 = makeInterest('Installment saving');
+        var interest3 = makeInterest('Fund');
+
+
+        console.log(interest1(100));
+        console.log(interest2(200));
+        console.log(interest3(300));
+
+
+
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>javascript - object 02</title>
+  </head>
+  <body>
+    <h1>Object 02</h1>
+    <script type="text/javascript">
+      "use strict"
+      // object array
+      var person = [
+        {name:'Lilian', eng:100, math:80, kor:70},
+        {name:'john', eng:90, math:80, kor:95},
+        {name:'jeremy', eng:100, math:70, kor:80},
+      ];
+
+        console.log("==== for 2 ====");
+        for(var i=0; i<person.length; i++){
+          console.log(person[i].name, person[i].eng, person[i].math, person[i].kor);
+        }
+        // ex 2)
+        var person = [
+          {name:'Lilian', age:24, tel:'0999-111-2222', address:'iloilo city', birthday:'jan.20,1995'},
+          {name:'john', age: 20, tel:'0999-123-2244', address:'Cainta', birthday: 'sept.23,1998'},
+          {name:'jeremy', age: 25, tel:'0998-189-2097', address:'Antipolo', birthday: 'Dec.2,1989'},
+          {name:'kaly', age: 19, tel:'0999-098-6785', address:'Marikina', birthday: 'June 20,1997'},
+          {name:'cris', age: 23, tel:'0999-111-2362', address:'Cavite', birthday: 'April 18,1995'}
+        ];
+        console.log("==== for ====");
+          for(var i=0; i<person.length; i++){
+            console.log(
+              person[i].name,
+              person[i].age, person[i].tel,
+              person[i].address,
+               person[i].birthday);
+          }
+
+          console.log("==== forEach 1 ====");
+          function st1(person) {
+            console.log(person.name, person.age, person.tel, person.address, person.birthday);
+          }
+          person.forEach(st1);
+
+          console.log('==== forEach 2====');
+          person.forEach(function (person) {
+            console.log(person.name, person.age, person.tel, person.address, person.birthday);
+          });
+
+
+
+
+
+
+    </script>
+  </body>
+</html>

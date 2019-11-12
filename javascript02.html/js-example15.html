@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>object member - data and method(function)</title>
+  </head>
+  <body>
+      <h1>Calculator 01</h1>
+
+      <script type="text/javascript">
+        "use strict"
+
+        var sum = 0;
+        var note = '';
+
+        function plus (value){
+          sum += value; //sum = sum + value;
+          note += '+ ' + value; // " + value "
+        }
+        function minus(value) {
+          sum -= value; // sum = sum - value;
+          note += ' - ' + value; // " - value "
+        }
+        function multiple(value) {
+          sum *= value;
+          note *= ' * ' + value;
+        }
+        function divide(value) {
+          sum /= value;
+          note /= ' / ' + value;
+        }
+        function init(value) {
+          if(arguments.length == 0) {
+            sum = 0;
+          } else {
+            sum = value;
+            note += + value;
+          }
+        }
+        // 3 * 2 + 7 - 5 = 8
+        init(3);
+        multiple(2);
+        plus(7);
+        minus(5);
+
+        function printResult(){
+          console.log(sum);
+          console.log(note + " = " + sum);
+        }
+
+        printResult(); // 3 * 2 + 7 - 5 = 8 
+
+
+
+
+      </script>
+  </body>
+</html>

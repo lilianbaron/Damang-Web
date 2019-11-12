@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Factory method</title>
+  </head>
+  <body>
+    <h1>Factory method</h1>
+    <script type="text/javascript">
+      "use strict"
+
+      function makeStudent(name, kor, eng, math) {
+        return{
+          "name": name,
+          "kor": kor,
+          "eng": eng,
+          "math": math
+        };
+      }
+
+      // object array - use makeStudent
+      var student = [
+         makeStudent('Lilian',100,80,90),
+         makeStudent('Jeremy',80,100,90),
+         makeStudent('John' ,70,80,90)
+      ];
+
+      console.log("==== forEach() ====");
+        student.forEach(function(stu) {
+          console.log(stu.name, stu.kor, stu.eng, stu.math);
+        });
+
+
+
+    </script>
+  </body>
+</html>

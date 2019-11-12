@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Factory method 02</title>
+  </head>
+  <body>
+    <h1>Factory method 02</h1>
+    <script type="text/javascript">
+      "use strict"
+
+      function students(name, kor,eng, math) {
+        this.name = name;
+        this.kor = kor;
+        this.eng = eng;
+        this.math = math;
+      }
+
+      // Initialization - object arrray -> use Student()
+      var students = [
+        new students('Lilian' ,100,90,80),
+        new students('Jeremy', 90,80,70),
+        new students('John',80,70,100)
+      ];
+
+      console.log("==== forEach() ====");
+      students.forEach(function(a){
+      console.log(a.name, a.kor, a.eng, a.math);
+     });
+
+    </script>
+  </body>
+</html>

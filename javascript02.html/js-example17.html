@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Calculator  02</title>
+    <script src="calculator2.js"></script>
+  </head>
+  <body>
+    <h1>Calculator 02</h1>
+    <script type="text/javascript">
+        "use strict"
+
+        // 01. 3 * 2 + 7 - 5 = ??
+      var calc1 =  makeCalculator();
+      calc1.init(3);
+      calc1.multiple(2);
+      calc1.plus(7);
+      calc1.minus(5);
+
+      calc1.printResult();   // 01. 3 * 2 + 7 - 5 = 8
+
+        // 02. 8 - 4 * 2 / 9 = ??
+        var calc2 = makeCalculator();
+        calc2.init(8);
+        calc2.minus(4);
+        calc2.multiple(2);
+        calc2.divide(9);
+
+        calc2.printResult();
+
+        // 03. 3 * 6 / 2 + 9 - 7 = ??
+        var calc3 = makeCalculator();
+        calc3.init(3);
+        calc3.multiple(6);
+        calc3.divide(2);
+        calc3.plus(9);
+
+        calc3.printResult();
+    </script>
+  </body>
+</html>

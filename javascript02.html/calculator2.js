@@ -42,6 +42,4 @@ calculator.printResult = function (){
 }
    return calculator;
 
-
-
 }

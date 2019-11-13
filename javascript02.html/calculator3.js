@@ -35,4 +35,5 @@ function Calculator() {
     this.printResult = function () {
       console.log(this.note + " = " + this.sum);
     };
+  
 }

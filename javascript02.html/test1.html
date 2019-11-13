@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Calculator test 01</title>
+    <script src="calculatortest01.js"></script>
+  </head>
+  <body>
+    <h1>Calculator test 01 </h1>
+    <script type="text/javascript">
+      "use strict"
+
+      // 01. 5 + 8 * 2 / 6 = ??
+      // 02. 9 - 4 + 5 * 2 = ??
+
+      var calc1 = new Calculator();
+      var calc2 = new Calculator();
+
+      calc1.init(5);
+      calc2.init(9);
+
+      calc1.plus(8);
+      calc2.minus(4);
+
+      calc1.multiple(2);
+      calc2.plus(5);
+
+      calc1.divide(6);
+      calc2.multiple(2);
+
+    calc1.printResult();
+    calc2.printResult();
+
+    </script>
+  </body>
+</html>

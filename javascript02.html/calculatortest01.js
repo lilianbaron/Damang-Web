@@ -36,3 +36,4 @@ Calculator.prototype.multiple = function (value) {
   Calculator.prototype.printResult = function () {
     console.log(this.note + " = " + this.sum);
   };
+

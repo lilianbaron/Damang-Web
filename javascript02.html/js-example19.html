@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>calculator 04 - prototype</title>
+    <script src="calculator4.js"></script>
+  </head>
+  <body>
+    <h1>Calculator 04 - prototype</h1>
+    <p>calculator.prototype</p>
+    <p>Shared resource repository</p>
+    <script type="text/javascript">
+      "use strict"
+
+      //1. 3 * 2 + 7 - 5 = 8
+      //2. 8 - 4 * 2 / 9 = ??
+      var calc1 = new Calculator();
+      var calc2 = new Calculator();
+
+
+      calc1.init(3);
+      calc2.init(8);
+
+      calc1.multiple(2);
+      calc2.minus(4);
+
+      calc1.plus(7);
+      calc2.multiple(2);
+
+      calc1.minus(5);
+      calc2.divide(9);
+
+      calc1.printResult();
+      calc2.printResult();
+
+    </script>
+  </body>
+</html>

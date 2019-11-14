@@ -13,7 +13,7 @@
         <p class="c1 c2">TEST....01</p>
         <h1 id="header02">TEST 2</h1>
         <p>TEST...02</p>
-        </div>
+      </div>
     </div>
     <div id="d2">
       <div id="d22">
@@ -21,18 +21,27 @@
         <p class="c2">TEST....03</p>
         <h1 id="header04">TEST 4</h1>
         <p>TEST...04</p>
-        </div>
+      </div>
     </div>
-
     <script>
-      var e1 = document.getElementById('header03');
-      console.log(e1.innerHTML);
+      "use strict"
+      // getElementById(id)
+     var e1 = document.getElementById('header02');
+      console.log(e1.innerHTML); // TEST 2
 
-      var changeText = prompt('insert text here!');
-       e1.innerHTML = changeText;
+      console.log(document.getElementById('header03').innerHTML);
 
-       var txt = document.createTextNode('Okay!');
-       e1.appendChild(txt);
+      var e4 = document.getElementById('header04');
+      var text = 'Hello Good Morning!';
+      console.log(e4.innerHTML = text);
+
+
+    var text2 = prompt('insert Text !!');
+    e1.innerHTML = text2;
+
+
+
+
     </script>
   </body>
 </html>

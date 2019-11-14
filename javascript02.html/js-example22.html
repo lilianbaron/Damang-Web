@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Javascript - DOM API</title>
+  </head>
+  <body>
+    <h1>DOM API - Finding Elements</h1>
+
+    <div id="d1">
+      <div id="d11">
+        <h1 id="header01" class="c1 c2">TEST1</h1>
+        <p class = "c1 c2">TEST...01</p>
+        <h1 id= "header02">TEST2</h1>
+        <p>TEST...02</p>
+      </div>
+      <div id="d12">
+        <h1 id = "header03" class="c2">TEST3</h1>
+        <p class="c2">TEST..03</p>
+        <h1 id="header04">TEST4</h1>
+        <p>TEST...04</p>
+      </div>
+    </div>
+
+    <div id="d2">
+      <h1 id="header05" class="c1">TEST5</h1>
+      <p class="c1">TEST...05</p>
+      <h1 id="header06">TEST6</h1>
+      <p>TEST...06</p>
+
+      <div id="d21">
+        <h1>TEST7</h1>
+        <p>This document has been reviewed the functionality and of the web!</p>
+      </div>
+    </div>
+
+     <script>
+       "use strict"
+       // document.getElementById('id name');
+       console.log('==== Finding Id Name ====');
+       //Q: header05
+       var e1 = document.getElementById('header05');
+       console.log(e1.innerHTML);
+
+       //Q: d21
+       var e2 = document.getElementById('d21');
+       console.log(e2.innerHTML);
+
+       // document.getElementByTagName('tagName');
+       console.log('==== Finding Tag Name ====');
+       // p tag
+       var pList = document.getElementsByTagName('p');
+       console.log(pList.length);
+       console.log(pList);
+       for(var i=0; i<pList.length; i++){
+         console.log(pList[i].innerHTML);
+       }
+
+       //document.querySelector('CSS selector');
+       // Q: #header05
+       console.log('==== Finding CSS Selector ====');
+       var e3 = document.querySelector('#header05'); // id = 'header05'
+       console.log(e3.innerHTML);
+
+       // Q: #12 -> all p tag
+       var d12 = document.getElementById('d12');
+      var pList = d12.getElementsByTagName('p');
+
+      console.log(d12.innerHTML);
+      console.log(pList.length);
+      console.log(pList);
+      for(var i=0; i<pList.length; i++){
+        console.log(pList[i].innerHTML);
+      }
+
+      // document.querySelectorAll('#d11 p.c1');
+       console.log('==== document.querySelectorAll ====');
+       var pList = document.querySelectorAll('#d11 p.c1');
+       for(var i=0; i < pList.length; i++){
+         console.log(pList[i].innerHTML);
+       }
+
+     </script>
+  </body>
+</html>

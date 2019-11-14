@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>DOM API - Create Elements</title>
+  </head>
+  <body>
+    <h1>DOM API - Create Elements</h1>
+    <script>
+      "use strict"
+      // document.createElement('p');
+      // appendChild
+      var p = document.createElement('p');
+      document.body.appendChild(p);
+
+      // document.createTextNode(text);
+      var p2 = document.createElement('p');
+      var text = document.createTextNode('<b>This is a TEXT Test!</b>');
+      p2.appendChild(text);
+      document.body.appendChild(p2);
+
+      // Elements.innerHTML
+      var p3= document.createElement('p');
+      p3.innerHTML = '<b>This is a TEXT Test!!!</b>';
+      document.body.appendChild(p3);
+
+      // document.body.innerHTML : change body text
+      document.body.innerHTML = 'Magandang Umaga!!';
+
+    </script>
+  </body>
+</html>

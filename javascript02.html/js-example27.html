@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Events - onclick event</title>
+    <style media="screen">
+      .btn{
+        border: 1px solid black;
+        width: 50px; height: 50px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Events : onclick</h1>
+    <hr />
+    <div class="btn" onclick="alert('btn1 clicked!')">BTN 1</div>
+    <h1 onclick="alert('Hello h1');">Hello h1</h1>
+    <div class="btn" id="h1">h1</div>
+    <div class="btn" id="h2">h2</div>
+    <div class="btn" id="h3">h3</div>
+    <div class="btn" id="h4" onclick="student();">h4</div>
+
+
+
+
+
+    <script type="text/javascript">
+      "use stict"
+      var h01 = document.getElementById("h1");
+       h01.onclick = clickH01;
+      function clickH01(event){
+        alert('H1 Clicked!');
+      }
+
+      // 02.
+      var h02 = document.getElementById("h2");
+      h02.onclick = function (event) {
+        alert('h2 Clicked!!');
+      }
+
+      // 03.
+      var h03 = document.getElementById("h3").onclick = function (event) {
+        alert('H3 Clicked!!!');
+      }
+      // ex.
+      function student(){
+        var input = Number(prompt("How old are you?","20"));
+        if(input < 19){
+          alert('student!!');
+        }else{
+          alert('adult!');
+        }
+      }
+    </script>
+  </body>
+</html>

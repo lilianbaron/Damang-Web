@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Events</title>
+    <style media="screen">
+      div, h1 {
+        border: 1px solid black;
+        padding: 20px; margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Events : capture, target, bubble</h1>
+    <div id="d1">d1
+      <div id="d11">d11<h1 id="h01">H01</h1></div>
+      <div id="d12">d12<h1 id="h02">H02</h1></div>
+    </div>
+    <div id="d2">
+      <div id="d21">d21<h1 id="h03">H03</h1></div>
+      <div id="d22">d22<h1 id="h04" onclick="console.log('H04 clicked');">H01</h1></div>
+    </div>
+
+    <script type="text/javascript">
+      "use strict"
+
+      // bubble
+        var d1 = document.getElementById('d1');
+        d1.addEventListener('click', function(event){
+          console.log('clicked d1');
+        });
+
+        var d11 = document.getElementById('d11');
+        d11.addEventListener('click', function(event){
+          console.log('clicked d11');
+        });
+
+        var h01 = document.getElementById('h01');
+        h01.addEventListener('click', function(event){
+          console.log('clicked h01');
+        });
+
+
+        // capture
+        var d2 = document.getElementById('d2');
+        d2.addEventListener('click', function(event){
+          console.log('clicked d2');
+        }, true);
+
+        var d21 = document.getElementById('d21');
+        d21.addEventListener('click',function(event){
+          console.log('clicked d21');
+        }, true);
+
+        var h3 = document.getElementById('h03');
+        h03.addEventListener('click', function(event){
+          console.log('clicked h03');
+        })
+
+
+    </script>
+  </body>
+</html>

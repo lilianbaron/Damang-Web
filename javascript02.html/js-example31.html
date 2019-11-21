@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Onload : create DOM Tree</title>
+
+    <style media="screen">
+      div, h1 {
+        border: 1px solid black;
+        padding: 20px;
+        margin: 5px;
+      }
+      </style>
+
+      <script type="text/javascript">
+        "use strict"
+
+        console.log("1...");
+
+        window.onload = function (){
+          console.log("window.onload()...");
+
+          var h01 = document.getElementById('h01');
+          h01.addEventListener('click', function(event){
+            console.log('h01 clicked');
+          });
+        };
+
+        (function () {
+          console.log('1.5...');
+        })();
+
+        console.log('2...');
+
+      </script>
+
+  </head>
+  <body>
+    <script>
+      alert("3...")
+    </script>
+    <h1>Onload : create DOM Tree -> print screen -> call onload</h1>
+
+    <div id="d01">d01
+      <div id="d11">d11<h1 id="h01">H01</h1></div>
+      <div id="d12">d12<h1 id="h02">H02</h1></div>
+      </div>
+      <script>
+        alert("4...")
+      </script>
+      <div id="d02">d02
+          <div id="d21"><h1 id="h03">H03</h1></div>
+          <div id="d22"><h1 id="h04" onclick="console.log('h04 clicked')">H04</h1></div>
+      </div>
+      <script>
+        alert("5...")
+      </script>
+
+
+
+
+
+
+
+  </body>
+</html>

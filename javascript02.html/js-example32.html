@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      div, h1 {
+        border: 1px solid black;
+        padding: 20px; margin: 5px;
+      }
+    </style>
+    <script type="text/javascript">
+      "use strict"
+
+      window.onload = function(){
+      var h1List =  document.getElementsByTagName('h1');
+        for (var i=0; i<h1List.length; i++){
+          h1List[i].onclick = function () {
+            this.style.color = 'red';
+            this.style.fontSize = '20px';
+            this.style.backgroundColor = 'blue';
+          };
+        }
+
+      };
+
+
+    </script>
+  </head>
+  <body>
+
+    <div id="d1">d1
+      <div id="d11">d11<h1 id="h01">H01</h1></div>
+      <div id="d12">d12<h1 id="h02">H02</h1></div>
+    </div>
+    <div id="d2">
+      <div id="d21">d21<h1 id="h03">H03</h1></div>
+      <div id="d22">d22<h1 id="h04">H01</h1></div>
+    </div>
+
+  </body>
+</html>

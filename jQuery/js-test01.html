@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery Basic test01</title>
+    <script src="jquery-3.4.1.min.js"></script>
+    <style media="screen">
+      p{
+        border: 1px solid black;
+        width: 150px; height: 150px;
+        color: white;
+        background-color: gray;
+        margin: 60px; padding: 15px;
+      }
+    </style>
+    <script>
+      $(document).ready(function(){
+        $("#btn1").click(function(){
+          $(".p1").hide();
+        });
+        $("#btn2").click(function(){
+          $(".p2").show()
+        });
+        $("#btn3").click(function(){
+          $(".p3").toggle();
+        });
+        $("#btn4").click(function(){
+          $(".p4").fade();
+        });
+        $("btn5").click(function(){
+          $(".p5").show();
+        });
+        $("btn6").click(function(){
+          $(".p6").reset();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button id="btn1">click 1</button>
+    <button id="btn2">hide</button>
+    <button id="btn3">hide/show</button>
+    <button id="btn4">DB click 4</button>
+    <button id="btn5">show</button>
+    <button id="btn6">reset</button>
+
+
+    <div class="text">
+      <p class="p1">Good Morning</p>
+    </div>
+    <p class="p2">Good Afternoon</p>
+    <p class="p3">Good Evening</p>
+    <p class="p4">Nice to meet you!</p>
+    <p class="p5">Let's have dinner!</p>
+    <p class="p6">Great idea.</p>
+  </body>
+</html>

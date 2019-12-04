@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery 03 - fading</title>
+    <script src= "jquery-3.4.1.min.js"></script>
+    <style media="screen">
+      div{
+      width: 200px; height: 100px;
+      color: white;
+      background-color: blue;
+      padding: 20px; margin: 5px;
+     display: none;
+   }
+    </style>
+    <script>
+      $(document).ready(function () {
+        $("#fadeIn").click(function(){
+          $("#textbox1").fadeIn();
+          $("#textbox2").fadeIn("slow");
+          $("#textbox3").fadeIn("3000");
+        });
+
+        $("#fadeOut").click(function () {
+          $("#textbox1").fadeOut();
+          $("#textbox2").fadeOut("slow");
+          $("#textbox3").fadeOut("3000");
+        });
+
+        $("#fadeToggle").click(function () {
+          $("#textbox1").fadeToggle();
+          $("#textbox2").fadeToggle("slow");
+          $("#textbox3").fadeToggle("3000");
+        });
+      });
+
+      //  $(selector).fadeTo(speed, opacity, callback);
+      // opacity value between 0 and 1
+      $(document).ready(function(){
+        $("fadeTo").click(function(){
+          $("textbox1").fadeTo("slow", 0.15);
+          $("textbox2").fadeTo("slow", 0.5);
+          $("textbox3").fadeTo("slow", 0.8);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button id="fadein">FadeIn</button>
+    <button id="fadeout">FadeOut</button>
+    <button id="fadeToggle">FadeToggle</button>
+    <button id="fadeto">FadeTo</button>
+    <div id="textbox1">
+      textbox1
+      Hello Good morning!
+      Hello Good morning!
+    </div>
+
+    <div id="textbox2">
+      textbox2
+      Hello Good morning!
+      Hello Good morning!
+    </div>
+
+    <div id="textbox3">
+      textbox3
+      Hello Good morning!
+      Hello Good morning!
+    </div>
+
+  </body>
+</html>

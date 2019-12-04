@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery Basic and Syntax</title>
+    <script src="jquery-3.4.1.min.js"></script>
+    <style media="screen">
+      p{
+        border: 1px solid blue;
+        width: 100px; height: 100px;
+        background-color: red;
+      }
+    </style>
+    <script>
+    //jQuery Basic Syntax
+    //Basic syntax is => $(selector).action();
+    //ex) $("#test").hide();
+
+     $(document).ready(function () {
+       $("#btn1").click(function () {
+         $(".p1").hide();
+       });
+       $("#btn2").dblclick(function () {
+         $(".p2").hide();
+       });
+       $("#btn3").click(function(){
+         location.reload();
+       });
+       $("#btnall").click(function(){
+         $("p").hide();
+       });
+      });
+
+
+    </script>
+  </head>
+  <body>
+    <button id="btn1">Click 1</button> <br />
+    <button id="btn2">DB Click 2</button> <br />
+    <button id="btnall">Click hide all</button> <br />
+    <button id="btn3">Reset</button> <br />
+    <div class="dv1">
+      <p class="p1">Hello World!</p>
+    </div>
+    <p class="p2"> p2 This is a heading</p>
+    <p class="p3"> p3 This is a paragraph</p>
+    <p>HAhahah</p>
+
+  </body>
+</html>

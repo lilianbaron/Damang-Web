@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery test 02</title>
+    <script src="jquery-3.4.1.min.js"></script>
+    <style media="screen">
+      h3{
+        width: 100%; height: 15px;
+        text-align: center;
+        padding: 8px;
+        border: 1px solid black;
+        background-color: gray;
+      }
+      p{
+
+      }
+
+
+      div {
+        padding: 8px;
+        text-align: center;
+        width: 350px;
+      }
+
+      #mouse{
+        width: 300px;
+      }
+      #text{
+        padding: 50px;
+        display: none;
+      }
+    </style>
+    <script>
+      $(document).ready(function(){
+        $("#flip3").click(function(){
+          $("#text").slideDown();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="mouse">Click to slide down panel</div>
+
+    <h3>ITTC Training Center</h3>
+    <p>IT Training Center is a Christian School that gives opportunity to other students to improve their skills regarding in computer.</p>
+   <div id="text">IT Training Center</div>
+
+  </body>
+</html>

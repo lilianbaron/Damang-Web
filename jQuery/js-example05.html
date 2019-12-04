@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery 05 - Animation</title>
+    <script src="jquery-3.4.1.min.js"></script>
+    <style media="screen">
+      div{
+      background-color: red;
+      height: 100px; width: 100px;
+      position: absolute;
+    }
+    </style>
+    <script>
+        $(document).ready(function(){
+          $("#btn1").click(function(){
+            $("div").animate({left: '250px'});
+          });
+          $("#btn2").click(function(){
+            $("div").animate({
+              left: '250px',
+              opacity: '0.5',
+              height: '150px',
+              width: '150px'
+            });
+          });
+          $("#btn3").click(function(){
+            $("div").animate({
+              left: '250px',
+              height: '+=150px',
+              width: '+=150px'
+            });
+          });
+          $("#btn4").click(function(){
+            $("div").animate({
+              height: 'toggle',
+            });
+          });
+          $("#btn5").click(function(){
+            var div = $('div');
+              div.animate({ height: '300px',  opacity: '0.4'}, "slow");
+              div.animate({ width: '300px',  opacity: '0.8'}, "slow");
+              div.animate({ height: '100px',  opacity: '0.4'}, "slow");
+              div.animate({ width: '100px',  opacity: '0.8'}, "slow");
+          });
+          $("#btn6").click(function(){
+            var div2 = $("div");
+            div2.animate({left: '100px', width: '150px'}, "slow")
+            div2.animate({fontSize: '3em'}, "slow");
+          });
+        });
+    </script>
+  </head>
+  <body>
+    <button id="btn1">Start Animation 1</button> <br />
+    <button id="btn2">Start Animation 2</button> <br />
+    <button id="btn3">Start Animation 3</button> <br />
+    <button id="btn4">Start Animation 4</button> <br />
+    <button id="btn5">Start Animation 5</button> <br />
+    <button id="btn6">Start Animation 6</button> <br />
+
+    <p>By default, All HTML elements have a static position, and cannot be moved.
+    To manipulate the position,
+    remember to first set the CSS position property of the element to relative,
+     fixed, or absolute</p>
+     <div>
+       Hello World!!
+     </div>
+  </body>
+</html>

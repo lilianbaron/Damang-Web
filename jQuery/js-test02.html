@@ -5,7 +5,7 @@
     <title>jQuery test 02</title>
     <script src="jquery-3.4.1.min.js"></script>
     <style media="screen">
-      h3{
+      div{
         width: 100%; height: 15px;
         text-align: center;
         padding: 8px;
@@ -13,26 +13,48 @@
         background-color: gray;
       }
      #text{
-        padding: 8px; margin: 5px;
-        text-align: center;
-        width: 250px; height: 150px;
-
+      width: 250px;
       }
+      #textbook:hover{
+          background-color: black;
+          color: white;
+      }
+      #textbook{
+        display:none;
+      }
+      p{
+        border: 1px solid black;
+        width: 550px;
+         padding: 8px;
+      }
+
     </style>
     <script>
-      $(document).ready(function(){
-        $("#flip3").click(function(){
-          $("#text").slideDown();
+        $(document).ready(function(){
+          $("#text").click(function(){
+            $("#textbook").hide();
+          });
+          $("#btn1").click(function(){
+            $("#textbook").slideDown(2000);
+          });
+          $("#btn2").click(function(){
+            $("p").fadeOut(3000);
+          });
         });
-      });
     </script>
   </head>
   <body>
+      <button id="btn1">Animation1</button>
+      <button id="btn2">Animation2</button>
 
 
-    <h3>ITTC Training Center</h3>
+
     <p>IT Training Center is a Christian School that gives opportunity to other students to improve their skills regarding in computer.</p>
-   <div id="text">IT Training Center</div>
+   <div id="text">IT Training Center</div> </br>
+   <div id="textbook">Good Morning!!</div>
+   <div id="">
+
+   </div>
 
   </body>
 </html>

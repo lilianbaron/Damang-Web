@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery - DOM 02: text, html, val, attr</title>
+    <script src= "https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+      // Set Content - text(), html(), val(),
+
+        $(document).ready(function(){
+          $("#btn1").click(function(){
+            $("#test1").text("Hello world!");
+          });
+          $("#btn2").click(function(){
+            $("#test2").html("<b>Hello World!</b>");
+          });
+          $("#btn3").click(function(){
+            $("#test3").val("Dolly Duck");
+          });
+        });
+
+        // callback function - text(), html(), val()
+        $(document).ready(function(){
+          $("#btn4").click(function(){
+            $("#test4").text(function(i, origText){
+              return "Old Text: " + origText + "New Text: Hello World! (index: " + i + ")";
+            });
+          });
+          $("#btn5").click(function(){
+            $("#test5").html(function ( i, origtext) {
+              return "Old Text: " + origText + "New HTML: Hello <b>World!</b>(index: "+ i +")";
+            });
+          });
+        });
+
+
+      // Set Attribute - attr()
+      $(document).ready(function(){
+        $("#btn6").click(function(){
+          $("#test6").attr("href","http://google.com").text("Google");
+        });
+      });
+
+      //Set callback function - attr()
+      $(document).ready(function(){
+        $("#btn7").click(function(){
+          $("#test7").attr("href",function (i, origText){
+            return origText + "/ittcus";
+          }).html("FACEBOOOK/ITTCUS");
+        });
+      });
+    </script>
+  </head>
+  <body>
+      <h1>Set Content - text(), html(), val(),</h1>
+      <p id="test1">This is a paragraph.</p>
+      <p id="test2">This is another paragraph.</p>
+      <p>Input field: <input type="text" id="test3" value="Mickey Mouse"</p>
+      <button id="btn1">Set Text</button><br />
+      <button id="btn2">Set HTML</button><br />
+      <button id="btn3">Set Value</button><br />
+      <hr />
+
+      <h1>Callback function - text(), html(), val()</h1>
+      <p id="test4">This is a <b>bold</b> paragraph!</p>
+      <p id="test5">This is another <b>bold</b> paragraph!</p>
+      <button id="btn4">Show Old/New Text</button><br />
+      <button id="btn5">Show Old/New HTML</button><br />
+        <hr />
+
+      <h1>Set Attribute - attr</h1>
+      <p><a href="http://facebook.com" id="test6">facebook</a></p>
+      <button id="btn6">Change href value</button>
+      <p>Mouse over the link(or click on it)to see that
+      the value of the href attribute has changed.</p>
+      <hr />
+
+
+      <h1>Callback Function - attr</h1>
+      <p><a href="http://facebok.com" id="test7" title="facebook">FACEBOOK</a></p>
+      <button id="btn7">Change href Value</button>
+
+
+
+
+  </body>
+</html>

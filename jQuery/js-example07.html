@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery - Callback functions</title>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+      // $(selector).hide(speed, callback);
+      $(document).ready(function(){
+        $("#btn1").click(function(){
+          $("p").hide(1000);
+          alert("The paragraph is now hidden!");
+        });
+      });
+
+
+      $(document).ready(function(){
+        $("#btn2").click(function(){
+          $("p").hide(2000, function() {
+          alert("The paragraph is now hidden 2!");
+        });
+        });
+      });
+    </script>
+  </head>
+  <body>
+      <button id="btn1">Hide</button>
+      <button id="btn2">Hide 2</button>
+      <p>This is a paragraph with little content.</p>
+  </body>
+</html>
